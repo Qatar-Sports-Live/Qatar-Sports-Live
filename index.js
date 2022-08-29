@@ -65,25 +65,23 @@ const countDown = () => {
 countDown();
 setInterval(countDown, 1000);
 
+//CAROUSEL
+const slides = document.querySelectorAll('.news-article');
+const slideContainer = document.querySelector('.news-articles')
+console.log(slides)
+const slideSize = slides[0].clientWidth + 32;
+// console.log(slideSize)
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+// console.log(nextBtn, prevBtn);
+let counter = 1;
+nextBtn.addEventListener('click', ()=>{
+    counter++;
+    if (counter>=slides.length) return;
+    slideContainer.style.transform = `translateX(-${slideSize*counter}px)`;
 
-/* SLIDER IMAGES WITH JAVASCRIPT AND CSS STARTS HERE */
-var slider = document.querySelector(".banner").children,
-  sliderLen = slider.length;
-
-let slid = 0;
-
-function slides() {
-  for (let i = 0; i < sliderLen; i++) {
-    slider[i].classList.remove("slide-play");
-  }
-  slider[slid].classList.add("slide-play");
-  if (slid == sliderLen - 1) {
-    slid = 0;
-  } else {
-    slid++;
-  }
-  setTimeout(slides, 5000);
-}
-
-window.onload = slides();
-/* SLIDER IMAGES WITH JAVASCRIPT AND CSS ENDS HERE */
+    // console.log('ok')
+})
+prevBtn.addEventListener('click', ()=>{
+    slideContainer.style.transform += `translateX(${slideSize*counter}px)`;
+})
