@@ -294,16 +294,39 @@ position: relative;
   /* END OF HEADER SECTION */
  
   /*START OF SECTION ARTICLES */
-
-/* .carousel-container{
-  display: flex;
-  overflow: hidden;
+  .carousel-control-btns{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    opacity: 0.8;
+  }
+  .carousel-control-btns i{
+    display: block;
+    color: #fff;
+    background: #1b1ba0;
+    margin: 1rem;
+    position: relative;
+    top: 10rem;
+    padding: 0.1rem 0.8rem 0.1rem 1rem;
+    border-radius: 0.rem;
+    cursor: pointer;
+  }
+  /* .carousel-control-btns .fa-arrow-left-long{
+    margin-right:1rem;
   } */
+  .news-articles{
+    display: flex;
+    overflow: hidden;
+    /* justify-content: center; */
+    /* padding: 1rem; */
+  }
   .category-heading{
     /* color: #1b1ba0; */
     background: #1b1ba0;
     color: #fff;
-    padding: 0.1rem 1rem ;
+    padding: 0.5rem 1rem ;
     border-radius: 0.1rem;
     margin: 1rem;
   }
@@ -323,6 +346,12 @@ position: relative;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+/* .place img{
+  min-width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 1.2em;
+  object-fit: cover;
+} */
 .news-text{
   min-width: 15.625rem;
   background: #f6f6fc;
@@ -341,73 +370,3 @@ position: relative;
   margin: 1rem;
 }
   /*END OF SECTION ARTICLES */
-
-
-   /* TESTING */
-   .destinations-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .destinations-header h1{
-      font-size: clamp(1.1rem, 2.5vw, 2.5rem);
-      letter-spacing: unset;
-      margin-left: 3rem;
-      /* text-transform: uppercase */
-      font-style: italic;
-      line-height: 1;
-  }
-  
-  .places{
-      display: flex;
-      overflow: hidden;
-      flex-wrap: nowrap;
-      margin-left: 1rem;
-      transition: all ease 1.1s;
-  }
-  .place{
-      padding:1.4rem;
-      position: relative;
-  }
-  .price{
-      position: absolute;
-      right: 2.1rem;
-      top: 2rem;
-      background-color: #fff;
-      padding: 0.2em 0.6em;
-      border-radius: 1em;
-      color: #242ad4;
-  }
-  .price:hover{
-      opacity: .5;
-  }
-  .place img{
-      min-width: 15.625rem;
-      height: 15.625rem;
-      border-radius: 1.2em;
-      object-fit: cover;
-  }
-  .place-description{
-      font-weight: 600;
-      color: #222;
-  }
-  .place-name{
-  font-weight: 600;
-  color:#777;
-  font-size:0.8rem;
-  }
-  .rating{
-      font-size: 0.9rem;
-      padding: 0.8rem 0.8rem 0rem 0rem;
-      color: #777;
-  }
-  .rating span{
-      background: rgba(187, 198, 235, 0.4);
-      padding: 0.01em 0.2em;
-      letter-spacing: 1px;
-      border-radius: 0.8em;
-      font-size: 0.8rem;
-      color: rgb(26, 23, 202);
-      /* font-weight: 700; */
-  }
-   /* TESTING */
