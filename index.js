@@ -161,7 +161,7 @@ function scrollRight(){
 const autoScroll = (t)=>{
     setInterval(scrollRight,t)
 }
-// autoScroll(2500);
+autoScroll(2500);
 
 // SMOOTH SCROLLING EFFECT
 $(document).ready(function(){
