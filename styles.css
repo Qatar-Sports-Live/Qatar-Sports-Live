@@ -179,6 +179,22 @@ video{
     z-index: 10;
     display: none;
   } 
+   /* SMALL SCREENS */
+   @media(max-width:850px){
+    nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+    }
+    .hamburger{
+      display: block;
+    }
+    nav .links{
+      display: none;
+    }
+    .nav-links-small-screen{
+      display: flex;
+    }}
   /******END OF NAV *****/
   /* HEADER SECTION */
   header{
@@ -279,9 +295,10 @@ position: relative;
  
   /*START OF SECTION ARTICLES */
 
-.news-articles{
+/* .carousel-container{
   display: flex;
-  }
+  overflow: hidden;
+  } */
   .category-heading{
     /* color: #1b1ba0; */
     background: #1b1ba0;
@@ -298,8 +315,8 @@ position: relative;
   background: #2575fc;
   }
 .news-article img {
-  /* max-width: 20rem; */
-  /* min-width: 15.625rem; */
+  max-width: 20rem;
+  min-width: 15.625rem;
   min-width: 100%;
   height: 13.625rem;
   border-radius: 1em 1em 0em 0em;
@@ -325,94 +342,72 @@ position: relative;
 }
   /*END OF SECTION ARTICLES */
 
- /* SMALL SCREENS */
-  @media(max-width:850px){
-    nav{
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-    }
-    .hamburger{
-      display: block;
-    }
-    nav .links{
-      display: none;
-    }
-    .nav-links-small-screen{
+
+   /* TESTING */
+   .destinations-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .destinations-header h1{
+      font-size: clamp(1.1rem, 2.5vw, 2.5rem);
+      letter-spacing: unset;
+      margin-left: 3rem;
+      /* text-transform: uppercase */
+      font-style: italic;
+      line-height: 1;
+  }
+  
+  .places{
       display: flex;
-    }
-    /* SLIDER IMAGES WITH JAVASCRIPT AND CSS STARTS HERE */
-    /* .banner {
-      height: 70vh;
-    }
-  
-    .content {
-      width: 85%;
-      padding: 20px;
-    }
-  
-    .slider {
-      height: 80vh;
-    }
-  
-    #sliderImg {
-      width: 100vw;
-      height: 80vh;
-    }
-  
-    .content h2 {
-      font-size: 24px;
-    }
-  
-    .content h4 {
-      font-size: 18px;
-    }
-  
-    button {
-      padding: 6px 10px;
-      font-size: 18px;
-      font-weight: 500;
-      margin-top: 25px;
-    }
-  
-    /* SLIDER IMAGES WITH JAVASCRIPT AND CSS ENDS HERE */
-    /* <!-- SMALL NEWS POSTS STARTS FROM HERE --> */
-    /* .more-news-sect{
-      flex-wrap: wrap;
-    } */
-    /* <!-- SMALL NEWS POSTS ENDS FROM HERE --> */
+      overflow: hidden;
+      flex-wrap: nowrap;
+      margin-left: 1rem;
+      transition: all ease 1.1s;
   }
-
-
-
-  /* KEY FRAMES FOR ANIMATIONS */
-/* @keyframes sliding {
-  0% {
-    transform: scale(1.1);
+  .place{
+      padding:1.4rem;
+      position: relative;
   }
-
-  100% {
-    transform: scale(1.0);
+  .price{
+      position: absolute;
+      right: 2.1rem;
+      top: 2rem;
+      background-color: #fff;
+      padding: 0.2em 0.6em;
+      border-radius: 1em;
+      color: #242ad4;
   }
-}
-
-@keyframes buttonMove {
-  0% {
-    transform: translateY(100%);
+  .price:hover{
+      opacity: .5;
   }
-
-  100% {
-    transform: translateY(0%);
+  .place img{
+      min-width: 15.625rem;
+      height: 15.625rem;
+      border-radius: 1.2em;
+      object-fit: cover;
   }
-}
-
-@keyframes headMove {
-  0% {
-    transform: translateX(100%);
+  .place-description{
+      font-weight: 600;
+      color: #222;
   }
-
-  100% {
-    transform: translateX(0%);
+  .place-name{
+  font-weight: 600;
+  color:#777;
+  font-size:0.8rem;
   }
-} */
- 
+  .rating{
+      font-size: 0.9rem;
+      padding: 0.8rem 0.8rem 0rem 0rem;
+      color: #777;
+  }
+  .rating span{
+      background: rgba(187, 198, 235, 0.4);
+      padding: 0.01em 0.2em;
+      letter-spacing: 1px;
+      border-radius: 0.8em;
+      font-size: 0.8rem;
+      color: rgb(26, 23, 202);
+      /* font-weight: 700; */
+  }
+   /* TESTING */
