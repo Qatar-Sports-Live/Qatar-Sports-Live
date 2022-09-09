@@ -311,7 +311,8 @@ position: relative;
   display: flex;
   } */
   .category-heading{
-    background: var(--clr-headings);
+    /* background: var(--clr-headings); */
+    background: #fff;
     color: #fff;
     letter-spacing: 2.5px;
     padding: 0.4rem 1rem ;
