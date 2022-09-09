@@ -316,14 +316,13 @@ position: relative;
     letter-spacing: 2.5px;
     padding: 0.4rem 1rem ;
     border-radius: 0.2rem;
-    margin: 9.8rem 1rem 1rem 1rem;
+    margin: 14rem 1rem 1rem 1rem;
   }
   @media(max-width:480px){
     .category-heading{
     margin: 10rem 1rem 1rem 1rem;
     }
   }
-
 
 /* JOSOEPH STYLES */
 .top--search{
@@ -475,7 +474,7 @@ background: #fff;
   /* background-attachment: fixed; */
   background-position: center center;   
   color: #fff;
-  padding: 15em 0;
+  padding: 13.5em 0;
 }
 
  .horse-bigger-post{
@@ -491,7 +490,7 @@ background: #fff;
   /* background-attachment: fixed; */
   background-position: center center;   
   color: #fff;
-  padding: 15em 0;
+  padding: 13.5em 0;
 }
 .basketball-bigger-post{
   position: relative;
@@ -506,7 +505,7 @@ background: #fff;
   /* background-attachment: fixed; */
   background-position: center center;   
   color: #fff;
-  padding: 15em 0;
+  padding: 13.5em 0;
 }
 
 .football-bigger-post{
@@ -522,11 +521,11 @@ background: #fff;
   /* background-attachment: fixed; */
   background-position: center center;   
   color: #fff;
-  padding: 15em 0;
+  padding: 13.5em 0;
 }
 
 .bigger-post-description{
-  margin: 1rem 2rem;
+  margin: 1rem 2rem 1rem 2rem;
   font-weight: 500;
   max-width: 700px;
 }
