@@ -432,17 +432,18 @@ background: #fff;
 }
 .small-posts-container{
   padding: 1rem 0.5rem 0rem 0.5rem;
-  margin: 1rem;
+  margin: 1rem 0.2rem 1rem 0.2rem ;
 }
 .small-post img{
-  width:150px;
+  width:135px;
   object-fit:cover;
   height: 100%;
   border-radius: 0.2rem;
 }
 .small-post{
   display: flex;
-  margin: 1rem 1rem 1.5rem 1rem;
+  margin: 1rem 0.1rem 1.5rem 0.1rem;
+  /*margin: 1rem 1rem 1.5rem 1rem;*/
   gap:1rem;
   background: #fffbfb;
   height: 90px;
@@ -450,9 +451,11 @@ background: #fff;
   color: #333;
   font-weight: 400;
   box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  /* justify-content: space-between; */
 }
 .small-post-description{
   max-width: 450px;
+  min-height: 90px;
 }
 .news-section .small-post{
   margin: 1rem 0.1rem 1.8rem 0rem;
