@@ -65,50 +65,50 @@ const countDown = () => {
 countDown();
 setInterval(countDown, 1000);
 
-//CAROUSEL SLIDE @RECENT IN SPORTS SECTION
-const slideNextBtn = document.querySelector('.next-btn')
-const slidePrevBtn = document.querySelector('.prev-btn')
-const slides = document.querySelectorAll('.slide');
-const carouselContainer = document.querySelector('.carousel-track-container');
-const slideWidth = slides[0].clientWidth
+// //CAROUSEL SLIDE @RECENT IN SPORTS SECTION
+// const slideNextBtn = document.querySelector('.next-btn')
+// const slidePrevBtn = document.querySelector('.prev-btn')
+// const slides = document.querySelectorAll('.slide');
+// const carouselContainer = document.querySelector('.carousel-track-container');
+// const slideWidth = slides[0].clientWidth
 
-/*extend to left by equal width ie slidewidth to 
-remove stacking on top of each other*/
-// slides.forEach((slide, index){
-//   slide.style.left= "slideWidth*index";
+// /*extend to left by equal width ie slidewidth to 
+// remove stacking on top of each other*/
+// // slides.forEach((slide, index){
+// //   slide.style.left= "slideWidth*index";
+// // })
+// slides.forEach((slide,index)=>{
+//  slide.style.left = `${slideWidth*index}px`;
+// //  console.log(x)
 // })
-slides.forEach((slide,index)=>{
- slide.style.left = `${slideWidth*index}px`;
-//  console.log(x)
-})
-slideNextBtn.addEventListener('click', slideRight)
-slidePrevBtn.addEventListener('click', slideLeft)
+// slideNextBtn.addEventListener('click', slideRight)
+// slidePrevBtn.addEventListener('click', slideLeft)
 
-let counter = 1 //to calculate how many slides have been moved, similar to click times
-function slideRight(){
-  counter++;
-  const currentSlide = document.querySelector('.current-slide')
-  const nextSlide = currentSlide.nextElementSibling;
-  const amountToMove = nextSlide.style.left;
-  const totalAmountToMove = slideWidth*slides.length;
-  // if(counter<slides.length){
-  carouselContainer.style.transform = `translateX(-${amountToMove})`
-  currentSlide.classList.remove('current-slide');
-  nextSlide.classList.add('current-slide')
-  // console.log(counter)
+// let counter = 1 //to calculate how many slides have been moved, similar to click times
+// function slideRight(){
+//   counter++;
+//   const currentSlide = document.querySelector('.current-slide')
+//   const nextSlide = currentSlide.nextElementSibling;
+//   const amountToMove = nextSlide.style.left;
+//   const totalAmountToMove = slideWidth*slides.length;
+//   // if(counter<slides.length){
+//   carouselContainer.style.transform = `translateX(-${amountToMove})`
+//   currentSlide.classList.remove('current-slide');
+//   nextSlide.classList.add('current-slide')
+//   // console.log(counter)
+// // }
+// // else{
+// //   carouselContainer.style.transform = `translateX(-100px)`
+// //   currentSlide.classList.remove('current-slide');
+// //   nextSlide.classList.add('current-slide')
+// // }
 // }
-// else{
-//   carouselContainer.style.transform = `translateX(-100px)`
+
+// function slideLeft(){
+//   const currentSlide = document.querySelector('.current-slide')
+//   const nextSlide = currentSlide.previousElementSibling;
+//   const amountToMove = nextSlide.style.left;
+//   carouselContainer.style.transform = `translateX(-${amountToMove})`
 //   currentSlide.classList.remove('current-slide');
 //   nextSlide.classList.add('current-slide')
 // }
-}
-
-function slideLeft(){
-  const currentSlide = document.querySelector('.current-slide')
-  const nextSlide = currentSlide.previousElementSibling;
-  const amountToMove = nextSlide.style.left;
-  carouselContainer.style.transform = `translateX(-${amountToMove})`
-  currentSlide.classList.remove('current-slide');
-  nextSlide.classList.add('current-slide')
-}
