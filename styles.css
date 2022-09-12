@@ -813,3 +813,133 @@ footer{
 }
 }
  
+/* !################# ABLE STYLES */
+.News-contantainer{
+  max-width: 100%;
+}
+/* Header-of-article starts from here */
+.Header-of-article{
+  max-width: 100%;
+  background: url(images/basketball.jpg), radial-gradient( #f9f9f711,#a4a1a0, #4a1542);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 15rem 0;
+  object-fit: cover;
+
+}
+.Header-content-container{
+  width: 50%;
+  margin: 0 2rem;
+  color: #fafafb;
+  font-weight: bolder; 
+  font-size: 1rem;
+  font-style: italic;
+}
+.Header-content-container h2{
+  text-align: center;
+  color: #3505f5;
+  text-transform: uppercase;
+ }
+ 
+/* progress-bar */
+#Progress-bar{
+  --progress: 0;
+  height: 2px;
+  width: var(--progress);
+  background-color: #ff0000;
+  z-index: 1000;
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+}
+ 
+ 
+/* Header-of-article ends from here */
+
+/* Main-part-of-article starts from here */
+.Date{
+  text-align: center;
+  color: #ccc;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: l;
+}
+.Main-part-of-article{
+  /* border: 1px solid red;  */
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.Item-container-of-article{
+  /* border: 1px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Paragraphs-container{
+  /* border: 1px solid green;  */
+   width: 100%;
+   margin: 0 auto;
+  line-height: 1.5rem;
+  color: #423b3b;
+  display: flex;
+  flex-direction: column; 
+   gap: 5rem;
+   padding: 0 1rem;
+}
+.Paragraph-item{
+  padding: 0.5rem 0;
+  max-width: 100%;
+}
+blockquote{
+  /* display: none;  */
+  max-width: 100%;
+}
+.twitter-tweet{
+  min-width: 326px;
+  max-width: 326px;
+  margin: 0 auto;
+}
+.Embeded{
+  /* border: 1px solid green; */
+  margin-top: 1rem;
+  max-width: 100%;
+  height: 100%;
+}
+ @media(max-width:850px){
+  .Main-part-of-article{
+      max-width: 100%;
+  }
+  .Paragraphs-container{
+      width: 100%;
+      max-width: 100%;
+      padding: 0.5rem;
+  }
+  .Paragraphs-block{
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .Header-of-article{
+    /* font-size: xx-small; */
+    font-weight: bolder;
+  }
+  .Header-content-container{
+    width: 90%; 
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+  .Header-content-container h2{
+    font-size: 2rem;
+    margin-right: 11rem;
+  }
+  .Header-content-container p{
+    padding-bottom: 1.5rem;
+  }
+
+} 
+
+/* Main-part-of-article ends from here */
