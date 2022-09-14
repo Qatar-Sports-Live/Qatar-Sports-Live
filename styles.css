@@ -832,15 +832,17 @@ footer{
 .Header-content-container{
   width: 50%;
   margin: 0 2rem;
-  color: #fafafb;
+  color: #ccc;
   font-weight: bolder; 
   font-size: 1rem;
   font-style: italic;
 }
 .Header-content-container h2{
-  text-align: center;
-  color: #3505f5;
+  color: #f90573;
   text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-style: normal;
  }
  
 /* progress-bar */
@@ -933,7 +935,7 @@ blockquote{
     font-weight: bolder;
   }
   .Header-content-container h2{
-    font-size: 1rem;
+    /* font-size: 1rem; */
     margin-right: 11rem;
   }
   .Header-content-container p{
@@ -947,26 +949,27 @@ blockquote{
   display: grid;
   gap: 1rem;
   grid-auto-flow: column;
-  grid-auto-columns: 21%;
+  grid-auto-columns: 27%;
   overflow-x: auto;
   scroll-behavior:smooth;
-  padding: 0 1rem 1rem;
+  padding: 1rem;
 }
 .Related-item{
   display: grid;
-  grid-template-rows: min-content;
+  grid-template-rows: max-content;
   padding: 1rem;
-  background: #494949;
+  background: #380e2b;
   border-radius: 0.1rem;
   color: #fff;
   
 }
 .Related-item > img{
   inline-size: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+  border-radius: 0.2rem 0.2rem 0 0;
 }
-
+ 
 .Snap-related-articles{
   scroll-snap-type:  x mandatory;
   scroll-padding: 1rem;
@@ -975,5 +978,43 @@ blockquote{
   scroll-snap-align: start;
 }
 /* !styles on the more related articles(@newsArticles) ends from here */
+
+/* !Back-to-top starts from here */
+.Back-to-top{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5em;
+  background: #f8058b;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+}
+.Show-Back-to-top{
+  visibility: visible;
+  z-index: 5000;
+}
+.fa-arrow-up{
+  position: relative;
+  top: -0.7rem;
+  color: #fff;
+   
+}
+@keyframes bounce{
+  0%{
+    transform: scale(0.5);
+  }
+  50%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(0.6);
+  }
+}
+
 
 /* Main-part-of-article ends from here */
