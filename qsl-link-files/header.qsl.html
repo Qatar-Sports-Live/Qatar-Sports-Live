@@ -1,0 +1,227 @@
+<style>
+    nav{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 1fr 4fr 2fr ;
+    align-items: center;
+    padding: 0.5rem;
+    background: #fff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+  }
+  nav a, nav span{
+    margin-right: 1rem;
+    /* color: rgb(3, 1, 37); */
+    color: #08084a;
+    cursor: pointer;
+  }
+  nav span{
+    color: var(--color-txt-primary);
+    font-weight: 500;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 100ms ease-in;
+    display: inline-block;
+  }
+  nav span:hover{
+    transform: scale(1.03);
+    opacity: .8;
+  }
+  .hamburger{
+    display: none;
+    cursor: pointer;
+  }
+  .hamburger span{
+    display: block;
+    height: 2px;
+    margin-bottom: 0.2rem;
+    width: 1.5rem;
+    /* background:#000; */
+    background: #070743;
+  }
+  body{
+    color: #494949;
+  }
+  /* The .nav-open class is to be manipulated by js */
+  .nav-open span:nth-of-type(1){
+    position: relative;  
+    transform: rotate(45deg);
+    transition: 500ms;
+    top: 0.6rem;
+  }
+  .nav-open span:nth-of-type(2){
+    transform: scale(1,0);
+    transition: 500ms;
+    }
+    .nav-open span:nth-of-type(3){
+      position: relative;
+      transform: rotate(-45deg);
+      transition: 500ms;
+      }
+  
+  
+  .nav-links-small-screen{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    margin-top: 3.8rem;
+    /* background: rgba(0,0,0,0.7); */
+    /* background: rgba(255, 255, 255,0.96); */
+    background: #ffffff;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 300ms ease-in-out;
+    max-width: 75%;
+    transform: translateX(-100%);
+    z-index: 1000;
+    box-shadow: 10px 0px 1px -10px #616060bf;
+    /* color:#1b1ba0; */
+    border-radius: 0.2em;
+  }
+  
+  .nav-links-small-screen a{
+    color: #08084a;
+    font-size: 1rem;
+  }
+  .nav-links-small-screen .account span{
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+    
+  }
+  .nav-links-small-screen .account span:first-of-type{
+    background: #ceceec;
+  }
+  .nav-links-small-screen .account span:nth-of-type(2){
+    background: #2a2ae4;
+    color: #fff;
+  }
+  .account span:nth-of-type(1){ /*on the big screen nav menu*/
+    border:2px solid #1b1ba0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .links span:nth-of-type(2){
+    background: #2a2ae4;;
+    color:#fff;
+    padding: 0.4rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .account span i{
+    font-size: 0.6rem;
+  }
+  .nav-links a{
+    color: #0e0e42;
+    font-weight: 600;
+  }
+  .nav-links a::after{
+    content: "";
+    width: 2.8rem;
+    height: 2px;
+    display: inline-block;
+    background: var(--color-bg-primary);
+    transition: 200ms ease-in-out;
+    position: relative;
+    top: 0.5rem;
+    right: 3.5rem;
+    transform: scale(0);
+  }
+  .nav-links a:hover:after{
+    transform: scale(1);
+  }
+  
+  .nav-overlay{
+    background: transparent;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+  } 
+  @media(max-width:850px){
+    nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+    }
+    .hamburger{
+      display: block;
+    }
+    nav .links{
+      display: none;
+
+    }
+    .nav-links-small-screen{
+      display: flex;
+    }
+}
+</style>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- <h3 class="logo">ASAPY</h3> -->
+    <a href="#"><h3>QSPORTS LIVE</h3></a>
+    <div class="links nav-links">
+      <a href="#">Fifa world Cup 2022</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Trending</a>
+      <a href="#">Marketing</a>
+    </div>
+    <div class="account links">
+      <span href="#">Sign in</span>
+      <span href="#">Sign Up <i class="fas fa-arrow-right"></i></span>
+    </div>
+    <div class="nav-links-small-screen">
+      <!-- <div class="account">
+              <span href="#">Log in</span>
+              <span href="#">Sign up <i class="fas fa-arrow-right"></i></span>
+          </div> -->
+      <a href="#">
+        <i class="fa-solid fa-arrow-trend-up"></i> Trending in sports</a
+      >
+      <a href="#"
+        ><i class="fa-solid fa-trophy"></i>
+        <i class="fa-solid fa-futbol"></i> Fifa 2022</a
+      >
+      <a href="#"><i class="fa-solid fa-question"></i> About Us </a>
+      <a href="#"><i class="fa-solid fa-rectangle-ad"></i>Marketing</a>
+      <a href="#"> <i class="fa-solid fa-at"></i> Contact Us</a>
+    </div>
+
+    <!-- <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div> -->
+ <script>
+    const navBtn = document.querySelector('.hamburger');
+const smallScreenMenu = document.querySelector('.nav-links-small-screen');
+const navLinksSmall = smallScreenMenu.querySelectorAll('a');
+const overlay = document.querySelector('.nav-overlay');
+
+//navigation menu toggle
+navBtn.addEventListener('click', openAndCloseMenu)
+function openAndCloseMenu(){  
+if(navBtn.classList.contains('nav-open')){
+    navBtn.classList.remove('nav-open');
+    smallScreenMenu.style.transform = 'translateX(-100%)'
+}
+else{
+    navBtn.classList.add('nav-open');
+    smallScreenMenu.style.transform = 'translateX(0%)'
+    overlay.style.display = "block"
+}
+}
+
+    navLinksSmall.forEach(navLink=>{
+        navLink.addEventListener('click',openAndCloseMenu)
+    })
+
+ </script>
+  
