@@ -1,7 +1,7 @@
-const navBtn = document.querySelector('.hamburger');
-const smallScreenMenu = document.querySelector('.nav-links-small-screen');
-const navLinksSmall = smallScreenMenu.querySelectorAll('a');
-const overlay = document.querySelector('.nav-overlay');
+// const navBtn = document.querySelector('.hamburger');
+// const smallScreenMenu = document.querySelector('.nav-links-small-screen');
+// const navLinksSmall = smallScreenMenu.querySelectorAll('a');
+// const overlay = document.querySelector('.nav-overlay');
 
 const scrollRightBtn = document.querySelector('.scroll-left')
 const scrollLeftBtn = document.querySelector('.scroll-right')
@@ -10,24 +10,37 @@ const mainDataContainer = document.querySelector('.user-data-section');
 
 const showCasevideo =  document.querySelector('.show-case-video')
 
+// include Header/Nav Bar in all Pages
+const nav = document.querySelector("nav");
+fetch("./qsl-link-files/header.qsl.html")
+  .then((res) => res.text())
+  .then((data) => {
+    nav.innerHTML = data;
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, "text/html");
+    eval(doc.querySelector("script").textContent);
+  });
+
+// ...............................................
+
 
 //navigation menu toggle
-navBtn.addEventListener('click', openAndCloseMenu)
-function openAndCloseMenu(){  
-if(navBtn.classList.contains('nav-open')){
-    navBtn.classList.remove('nav-open');
-    smallScreenMenu.style.transform = 'translateX(-100%)'
-}
-else{
-    navBtn.classList.add('nav-open');
-    smallScreenMenu.style.transform = 'translateX(0%)'
-    overlay.style.display = "block"
-}
-}
+// navBtn.addEventListener('click', openAndCloseMenu)
+// function openAndCloseMenu(){  
+// if(navBtn.classList.contains('nav-open')){
+//     navBtn.classList.remove('nav-open');
+//     smallScreenMenu.style.transform = 'translateX(-100%)'
+// }
+// else{
+//     navBtn.classList.add('nav-open');
+//     smallScreenMenu.style.transform = 'translateX(0%)'
+//     overlay.style.display = "block"
+// }
+// }
 
-    navLinksSmall.forEach(navLink=>{
-        navLink.addEventListener('click',openAndCloseMenu)
-    })
+//     navLinksSmall.forEach(navLink=>{
+//         navLink.addEventListener('click',openAndCloseMenu)
+//     })
 
 overlay.addEventListener('click', ()=>{
     overlay.style.display = "none"
